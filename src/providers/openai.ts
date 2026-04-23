@@ -35,16 +35,20 @@ export async function generateImageOpenAI(args: GenerateImageArgs): Promise<Gene
     model,
     prompt: args.prompt,
     size,
-    response_format: "b64_json",
   };
+
+  // response_format is only accepted by dall-e models; gpt-image-1 family rejects it
+  if (model.startsWith("dall-e")) {
+    requestParams.response_format = "b64_json";
+  }
 
   // Add quality parameter (supported by all models)
   if (args.quality) {
     requestParams.quality = args.quality;
   }
 
-  // gpt-image-1 specific parameters
-  if (model === "gpt-image-1") {
+  // gpt-image-1 family specific parameters (gpt-image-1, gpt-image-1-mini, future variants)
+  if (model.startsWith("gpt-image-1")) {
     if (args.background) {
       requestParams.background = args.background;
     }

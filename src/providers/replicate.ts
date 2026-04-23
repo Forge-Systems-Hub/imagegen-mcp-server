@@ -7,6 +7,10 @@ const DEFAULT_MODEL = "black-forest-labs/flux-1.1-pro";
 // Available Replicate models
 export const REPLICATE_MODELS = {
   "flux-1.1-pro": "black-forest-labs/flux-1.1-pro",
+  "flux-2-pro": "black-forest-labs/flux-2-pro",
+  "ideogram-v3-quality": "ideogram-ai/ideogram-v3-quality",
+  "ideogram-v3-balanced": "ideogram-ai/ideogram-v3-balanced",
+  "ideogram-v3-turbo": "ideogram-ai/ideogram-v3-turbo",
   "qwen-image": "qwen/qwen-image",
   "seedream-4": "bytedance/seedream-4",
 } as const;

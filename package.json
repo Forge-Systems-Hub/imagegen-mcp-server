@@ -30,6 +30,7 @@
   },
   "scripts": {
     "build": "tsc -p .",
+    "prepare": "npm run build",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
     "prepublishOnly": "npm run build",
