@@ -8,7 +8,7 @@ export interface GenerateImageArgs {
   size?: string; // e.g. "1024x1024" (overrides width/height when provided)
   format?: ImageFormat;
   seed?: number;
-  quality?: "standard" | "hd";
+  quality?: "standard" | "hd" | "low" | "medium" | "high" | "auto";
   style?: string;
   background?: "transparent" | "solid";
   // Model selection

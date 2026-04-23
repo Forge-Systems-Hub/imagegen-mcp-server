@@ -27,7 +27,7 @@ server.registerTool(
       size: z.string().optional(),
       format: z.enum(["png", "jpeg", "jpg", "webp"]).optional(),
       seed: z.number().int().optional(),
-      quality: z.enum(["standard", "hd"]).optional(),
+      quality: z.enum(["standard", "hd", "low", "medium", "high", "auto"]).optional(),
       style: z.string().optional(),
       background: z.enum(["transparent", "solid"]).optional(),
       model: z.string().optional(),
